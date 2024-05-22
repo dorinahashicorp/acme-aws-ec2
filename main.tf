@@ -17,7 +17,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"]  // Canonical's owner ID
 }
 
-resource "aws_instance" "example" {
+resource "aws_instance" "acme-vm" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
   tags = {
